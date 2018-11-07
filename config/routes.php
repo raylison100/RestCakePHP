@@ -23,6 +23,8 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+
+
 /**
  * The default class to use for all routes
  *
@@ -75,7 +77,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
-
     $routes->setExtensions(['json']);
+    $routes->resources('Recipes');
+
     $routes->fallbacks(DashedRoute::class);
 });
